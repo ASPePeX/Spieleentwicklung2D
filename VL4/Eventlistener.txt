@@ -1,0 +1,7 @@
+addEventListener(Event.ENTER_FRAME, update);
+
+function update(_event:Event) {
+	trace("update");
+	Figure.x += 1;
+}
+
