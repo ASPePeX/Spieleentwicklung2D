@@ -6,8 +6,7 @@
 
 		var speed = 1;
 
-		public function Enemy() {
-			}
+		public function Enemy() {}
 
 		public function Update() {
 			this.x -= speed;
@@ -16,10 +15,10 @@
 				Destroy();
 			}
 		}
-		
+
 		public function Destroy() {
-				futype.instance.RemBad(this);
-				this.parent.removeChild(this);
+			futype.instance.RemBad(this);
+			this.parent.removeChild(this);
 		}
 	}
 }

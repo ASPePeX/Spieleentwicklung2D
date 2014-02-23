@@ -10,7 +10,7 @@
 		public function Spawner(posx: int, posy: int) {
 			this.x = posx;
 			this.y = posy;
-			timer = 100;
+			timer = futype.instance.GetEnemytimer();
 			curtimer = timer;
 		}
 

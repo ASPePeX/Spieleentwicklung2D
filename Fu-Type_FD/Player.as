@@ -1,9 +1,6 @@
 ﻿package {
 
 	import flash.display.MovieClip;
-	import fl.controls.progressBarClasses.IndeterminateBar;
-	import flash.sensors.Accelerometer;
-
 
 	public class Player extends MovieClip {
 
@@ -33,7 +30,7 @@
 				var shot = new PlayerShot(this.x, this.y);
 				this.parent.addChild(shot);
 				futype.instance.AddGood(shot);
-				shotTimer = 30;
+				shotTimer = futype.instance.GetGuntimer();
 			}
 		}
 
@@ -58,5 +55,4 @@
 			this.parent.removeChild(this);
 		}
 	}
-
 }

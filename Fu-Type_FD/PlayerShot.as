@@ -20,7 +20,6 @@
 			if (this.x > 600) {
 				Destroy();
 			}
-
 		}
 		
 		public function Destroy() {
@@ -28,5 +27,4 @@
 				this.parent.removeChild(this);
 		}
 	}
-
 }

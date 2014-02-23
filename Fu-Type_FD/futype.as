@@ -25,8 +25,7 @@
 		var badStuff: Array = new Array();
 		var score: int;
 
-		var guntimerlaser;
-		var guntimermachinegun;
+		var guntimer;
 		var enemytimer;
 
 		var gameState: Boolean;
@@ -47,8 +46,7 @@
 
 		private function processXML(e: Event): void {
 			configXML = new XML(e.target.data);
-			guntimerlaser = configXML.value.(@name == "guntimer-laser");
-			guntimermachinegun = configXML.value.(@name == "guntimer-machinegun");
+			guntimer = configXML.value.(@name == "gun-timer");
 			enemytimer = configXML.value.(@name == "enemy-timer");
 		}
 
@@ -97,7 +95,6 @@
 							score += 10
 							bad.Destroy();
 						}
-
 					}
 				}
 			}
@@ -129,9 +126,17 @@
 		public function GetGamestate(): Boolean {
 			return gameState;
 		}
-		
-		public function SetGamestate(gs :Boolean) {
+
+		public function SetGamestate(gs: Boolean) {
 			gameState = gs;
+		}
+
+		public function GetGuntimer(): Number {
+			return guntimer;
+		}
+
+		public function GetEnemytimer(): Number {
+			return enemytimer;
 		}
 
 	}
